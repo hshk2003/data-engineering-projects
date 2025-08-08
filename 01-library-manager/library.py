@@ -51,7 +51,7 @@ def add_book(title, author, year, genre):
     
     try:
         with conn:
-            with conn.cursor() as cur:  # Fixed: Added parentheses
+            with conn.cursor() as cur:  
                 cur.execute(
                     "INSERT INTO books (title, author, year, genre) VALUES (%s, %s, %s, %s)",
                     (title, author, year, genre)
